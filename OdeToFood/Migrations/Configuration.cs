@@ -25,6 +25,12 @@ namespace OdeToFood.Migrations
                                     new RestaurantReview { Rating = 5, Body = "Good eats!"},
                                     new RestaurantReview { Rating = 6, Body = "Could be better...", ReviewerName = "Brent" }}
                                });
+
+            for (int i = 0; i < 1000; i++)
+            {
+                context.Restaurants.AddOrUpdate(r => r.Name,
+                    new Restaurant { Name = i.ToString(), City = "Nowheresville", Country = "ONAN" });
+            }
         }
     }
 }
