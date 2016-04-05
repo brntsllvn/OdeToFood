@@ -51,7 +51,7 @@
             $(target).replaceWith(data);
         });
 
-        return false
+        return false;
     };
 
     $("form[data-otf-ajax='true']").submit(ajaxFormSubmit);
